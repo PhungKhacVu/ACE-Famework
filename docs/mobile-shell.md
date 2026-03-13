@@ -10,7 +10,7 @@ or **a-Shell mini** (free, no subscription required).
 
 | App | Price | Download |
 |-----|-------|----------|
-| a-Shell | Free (IAP for extras) | [App Store](https://apps.apple.com/app/id1469overline54761) |
+| a-Shell | Free (IAP for extras) | [App Store](https://apps.apple.com/app/id1469754761) |
 | a-Shell mini | **Free** | [App Store](https://apps.apple.com/app/id1543900761) |
 
 Both apps ship with **Python 3** and **pip** built-in. No external computer
