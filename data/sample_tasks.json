@@ -1,0 +1,37 @@
+[
+  {
+    "id": "task-001",
+    "description": "How do I reverse a string in Python?",
+    "context": "Beginner Python developer asking about string manipulation.",
+    "metadata": {"domain": "coding", "difficulty": "easy"},
+    "ground_truth": "You can reverse a string in Python using slicing: s[::-1]."
+  },
+  {
+    "id": "task-002",
+    "description": "What is the difference between a list and a tuple in Python?",
+    "context": "Student learning Python data structures.",
+    "metadata": {"domain": "coding", "difficulty": "easy"},
+    "ground_truth": "Lists are mutable sequences; tuples are immutable. Lists use [], tuples use ()."
+  },
+  {
+    "id": "task-003",
+    "description": "Explain the concept of recursion with a simple example.",
+    "context": "Developer learning algorithmic thinking.",
+    "metadata": {"domain": "algorithms", "difficulty": "medium"},
+    "ground_truth": "Recursion is a function calling itself. Example: factorial(n) = n * factorial(n-1)."
+  },
+  {
+    "id": "task-004",
+    "description": "What are the main SOLID principles in software design?",
+    "context": "Software engineer studying design patterns.",
+    "metadata": {"domain": "software-design", "difficulty": "medium"},
+    "ground_truth": "SOLID: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion."
+  },
+  {
+    "id": "task-005",
+    "description": "How does a binary search algorithm work?",
+    "context": "CS student learning searching algorithms.",
+    "metadata": {"domain": "algorithms", "difficulty": "medium"},
+    "ground_truth": "Binary search divides a sorted array in half repeatedly to find a target value in O(log n)."
+  }
+]

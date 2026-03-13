@@ -1,0 +1,82 @@
+{
+  "bullets": [
+    {
+      "id": "bullet-001",
+      "content": "Always break complex problems into smaller, well-defined sub-tasks before solving.",
+      "bullet_type": "helpful",
+      "helpful_count": 5,
+      "harmful_count": 0,
+      "confidence": 0.9,
+      "tags": [
+        "strategy",
+        "decomposition"
+      ],
+      "source_task_id": null
+    },
+    {
+      "id": "bullet-002",
+      "content": "When answering coding questions, provide executable examples where possible.",
+      "bullet_type": "helpful",
+      "helpful_count": 4,
+      "harmful_count": 1,
+      "confidence": 0.8,
+      "tags": [
+        "coding",
+        "examples"
+      ],
+      "source_task_id": null
+    },
+    {
+      "id": "bullet-003",
+      "content": "Vague, one-sentence answers without explanation reduce user satisfaction.",
+      "bullet_type": "harmful",
+      "helpful_count": 0,
+      "harmful_count": 3,
+      "confidence": 0.75,
+      "tags": [
+        "quality",
+        "explanation"
+      ],
+      "source_task_id": null
+    },
+    {
+      "id": "bullet-004",
+      "content": "Reference authoritative sources or well-known patterns when applicable.",
+      "bullet_type": "helpful",
+      "helpful_count": 3,
+      "harmful_count": 0,
+      "confidence": 0.7,
+      "tags": [
+        "sourcing",
+        "credibility"
+      ],
+      "source_task_id": null
+    },
+    {
+      "id": "bullet-005",
+      "content": "Summarise the key takeaway at the end of each answer.",
+      "bullet_type": "helpful",
+      "helpful_count": 2,
+      "harmful_count": 0,
+      "confidence": 0.65,
+      "tags": [
+        "summary",
+        "communication"
+      ],
+      "source_task_id": null
+    },
+    {
+      "id": "9d99bd77-0f08-4286-a4d8-11d0d770c3d9",
+      "content": "Decompose complex tasks before attempting solutions.",
+      "bullet_type": "helpful",
+      "helpful_count": 0,
+      "harmful_count": 0,
+      "confidence": 0.8,
+      "tags": [
+        "strategy",
+        "decomposition"
+      ],
+      "source_task_id": "task-001"
+    }
+  ]
+}
