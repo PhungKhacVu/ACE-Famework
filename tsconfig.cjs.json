@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ES2018", "DOM"],
+    "strict": true,
+    "declaration": false,
+    "sourceMap": true,
+    "outDir": "dist/cjs",
+    "rootDir": "src",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
