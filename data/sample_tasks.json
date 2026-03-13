@@ -1,0 +1,20 @@
+[
+  {
+    "id": "task-001",
+    "description": "Summarise the key steps to deploy a Python web application to a local server",
+    "domain": "devops",
+    "context": "User is working on a Raspberry Pi running Ubuntu 22.04"
+  },
+  {
+    "id": "task-002",
+    "description": "Explain how to debug a failing pytest test efficiently",
+    "domain": "testing",
+    "context": "The test suite has 200+ tests; the failure happens only on CI"
+  },
+  {
+    "id": "task-003",
+    "description": "Outline the best practices for structuring a Python project for readability and maintainability",
+    "domain": "software-engineering",
+    "context": "Solo developer, small to medium codebase"
+  }
+]
