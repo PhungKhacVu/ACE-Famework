@@ -1,0 +1,22 @@
+{
+  "id": "hello-ace",
+  "name": "Hello ACE",
+  "description": "A minimal demonstration playbook that exercises all six ACE layers.",
+  "steps": [
+    {
+      "id": "step-1",
+      "description": "Define the mission",
+      "prompt": "State the primary mission of this session in one sentence."
+    },
+    {
+      "id": "step-2",
+      "description": "Identify the goal",
+      "prompt": "List the top three goals for this task."
+    },
+    {
+      "id": "step-3",
+      "description": "Plan first action",
+      "prompt": "Describe the very first concrete action to take."
+    }
+  ]
+}
