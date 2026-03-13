@@ -1,0 +1,7 @@
+[
+  {"task_id": "task-001", "expected": "105"},
+  {"task_id": "task-002", "expected": "def sum_list(numbers):\n    return sum(numbers)"},
+  {"task_id": "task-003", "expected_keywords": ["mutable", "immutable", "list", "tuple"]},
+  {"task_id": "task-004", "expected": "2.5 hours"},
+  {"task_id": "task-005", "expected_keywords": ["encapsulation", "inheritance", "polymorphism"]}
+]
