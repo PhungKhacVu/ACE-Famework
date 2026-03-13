@@ -1,0 +1,37 @@
+[
+  {
+    "id": "task001",
+    "description": "What is the best approach to solve a coding problem you haven't seen before?",
+    "domain": "software",
+    "context": {"difficulty": "medium"},
+    "ground_truth": "systematic"
+  },
+  {
+    "id": "task002",
+    "description": "How should you handle unexpected errors in production code?",
+    "domain": "software",
+    "context": {"severity": "high"},
+    "ground_truth": "gracefully"
+  },
+  {
+    "id": "task003",
+    "description": "What strategies help when you are stuck on a difficult problem?",
+    "domain": "general",
+    "context": {},
+    "ground_truth": "break"
+  },
+  {
+    "id": "task004",
+    "description": "How do you prioritise tasks when everything seems urgent?",
+    "domain": "productivity",
+    "context": {},
+    "ground_truth": null
+  },
+  {
+    "id": "task005",
+    "description": "What is the key principle behind writing maintainable code?",
+    "domain": "software",
+    "context": {},
+    "ground_truth": "readable"
+  }
+]
