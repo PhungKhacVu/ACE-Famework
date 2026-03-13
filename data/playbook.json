@@ -1,0 +1,62 @@
+[
+  {
+    "id": "57423f8f-1f8d-4a73-a8e9-d54c48953e52",
+    "text": "Use domain heuristics to guide decisions",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.8890898,
+    "updated_at": 1773396485.88909
+  },
+  {
+    "id": "d95d1881-7fa5-4a09-97de-75f1fe97e28e",
+    "text": "Cross-check results with known constraints",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.8891046,
+    "updated_at": 1773396485.8891048
+  },
+  {
+    "id": "702ae16c-82ce-4269-aa26-4cd45a64246b",
+    "text": "Leverage playbook context for faster resolution",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.8894997,
+    "updated_at": 1773396485.8895
+  },
+  {
+    "id": "967bd981-87c1-4f4c-b5fd-d8b6d51d4293",
+    "text": "Maintain consistency across all steps",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.889514,
+    "updated_at": 1773396485.889514
+  },
+  {
+    "id": "7bc6375e-45f2-40ed-b14b-2637d53062e8",
+    "text": "Always decompose complex tasks before acting",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.8898878,
+    "updated_at": 1773396485.889888
+  },
+  {
+    "id": "8e7b96e7-fa96-4e44-8b75-c5b55c9b9acd",
+    "text": "Verify each sub-result before proceeding",
+    "helpful_count": 1,
+    "harmful_count": 0,
+    "confidence": 0.7,
+    "tags": [],
+    "created_at": 1773396485.8899047,
+    "updated_at": 1773396485.889905
+  }
+]
