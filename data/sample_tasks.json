@@ -1,0 +1,37 @@
+[
+  {
+    "id": "task-001",
+    "instruction": "What is 15 multiplied by 7?",
+    "domain": "reasoning",
+    "context": {},
+    "ground_truth": "105"
+  },
+  {
+    "id": "task-002",
+    "instruction": "Write a Python function that returns the sum of a list of numbers.",
+    "domain": "coding",
+    "context": {},
+    "ground_truth": "def sum_list(numbers):\n    return sum(numbers)"
+  },
+  {
+    "id": "task-003",
+    "instruction": "Explain the difference between a list and a tuple in Python.",
+    "domain": "coding",
+    "context": {},
+    "ground_truth": "Lists are mutable (can be changed) while tuples are immutable (cannot be changed after creation). Lists use square brackets [], tuples use parentheses ()."
+  },
+  {
+    "id": "task-004",
+    "instruction": "If a train travels at 60 km/h and needs to cover 150 km, how long will the journey take?",
+    "domain": "reasoning",
+    "context": {},
+    "ground_truth": "2.5 hours"
+  },
+  {
+    "id": "task-005",
+    "instruction": "What are the three main principles of object-oriented programming?",
+    "domain": "coding",
+    "context": {},
+    "ground_truth": "Encapsulation, Inheritance, and Polymorphism."
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "85c07c2c756d4039bb76858a38cd2ced",
+    "content": "Always decompose complex tasks into smaller sub-problems.",
+    "domain": "reasoning",
+    "helpful_count": 0,
+    "harmful_count": 0,
+    "tags": [],
+    "source": "curator"
+  },
+  {
+    "id": "e65a2ce21763494c9f5468a15ce1fa40",
+    "content": "Verify assumptions before proceeding to the solution.",
+    "domain": "reasoning",
+    "helpful_count": 0,
+    "harmful_count": 0,
+    "tags": [],
+    "source": "curator"
+  },
+  {
+    "id": "0af12ce919a24ef39dc679a18075acaa",
+    "content": "Summarise the key insight at the end of each reasoning step.",
+    "domain": "reasoning",
+    "helpful_count": 0,
+    "harmful_count": 0,
+    "tags": [],
+    "source": "curator"
+  }
+]

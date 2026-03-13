@@ -1,0 +1,13 @@
+# ACE Framework dependencies
+#
+# The core framework requires NO external packages — it uses Python stdlib only.
+# This file lists optional packages for running tests and development tooling.
+#
+# Install everything with:  pip install -r requirements.txt
+# Or just for tests:        pip install pytest
+
+# Testing
+pytest>=7.0
+
+# Optional: linting (not required to run the framework)
+# ruff>=0.4
