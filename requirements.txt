@@ -1,0 +1,3 @@
+# Runtime – zero external dependencies (pure stdlib)
+# Dev / testing only
+pytest>=7.4
