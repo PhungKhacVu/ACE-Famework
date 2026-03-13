@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2018", "DOM"],
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

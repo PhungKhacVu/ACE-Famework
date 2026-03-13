@@ -1,0 +1,35 @@
+{
+  "name": "ace-framework",
+  "version": "0.1.0",
+  "description": "Adaptive Component Engine — a lightweight, TypeScript-first framework for building modular, component-based web applications.",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "test": "node --import tsx/esm --test 'tests/**/*.test.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [
+    "framework",
+    "component",
+    "reactive",
+    "typescript"
+  ],
+  "license": "MIT"
+}
