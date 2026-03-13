@@ -35,14 +35,19 @@ class PlaybookService:
         if self._seeded:
             return
         self._seeded = True
+        new_records = []
         for path in sorted(self._playbooks_dir.glob("*.json")):
             try:
                 with path.open("r", encoding="utf-8") as fh:
                     pb: Playbook = json.load(fh)
                 if "id" in pb and self._store.get(pb["id"]) is None:
-                    self._store.save(pb)
+                    new_records.append(pb)
             except (json.JSONDecodeError, KeyError):
                 pass  # skip malformed seed files
+        # Use save_many so all seed records are flushed in a single disk write
+        # instead of triggering a full JSON serialisation per record.
+        if new_records:
+            self._store.save_many(new_records)
 
     # ------------------------------------------------------------------
     # Public API

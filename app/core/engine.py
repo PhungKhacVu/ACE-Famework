@@ -53,8 +53,9 @@ class ACEEngine:
 
     def run(self, playbook: Playbook) -> RunResult:
         """Execute every step in *playbook* and return aggregated results."""
+        steps = playbook.get("steps", [])
         results: List[StepResult] = []
-        for step in playbook.get("steps", []):
+        for step in steps:
             prompt = f"{self._prefix} {step['prompt']}"
             try:
                 response = self._llm.chat(prompt)
@@ -66,7 +67,7 @@ class ACEEngine:
 
         metadata: Dict[str, Any] = {
             "layer": self._prefix,
-            "total_steps": len(playbook.get("steps", [])),
+            "total_steps": len(steps),
             "successful": sum(1 for r in results if r["ok"]),
         }
         return RunResult(
