@@ -1,0 +1,20 @@
+{
+  "id": "pb-sample-001",
+  "name": "hello-world",
+  "description": "A minimal two-step playbook to verify the ACE setup.",
+  "steps": [
+    {
+      "name": "greet",
+      "type": "prompt",
+      "instruction": "Say hello and introduce yourself as ACE.",
+      "params": {}
+    },
+    {
+      "name": "summarize",
+      "type": "prompt",
+      "instruction": "Summarize what you just said in one sentence.",
+      "params": {}
+    }
+  ],
+  "created_at": "2026-01-01T00:00:00"
+}
