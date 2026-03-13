@@ -76,7 +76,7 @@ ACE Framework — local-first autonomous cognitive entity CLI
 positional arguments:
   {list,show,run}
     list           List all available playbooks
-    show           Print a playbook as JSON
+    show           Show a playbook (human-readable by default)
     run            Run a playbook through the ACE engine
 ```
 
@@ -87,12 +87,38 @@ positional arguments:
 ```sh
 # List available playbooks
 python -m app.cli list
+```
+```
+┌────────────────────────────────────────────────────┐
+│  ACE Framework — Playbooks                         │
+└────────────────────────────────────────────────────┘
+  ID                        Name                  Steps
+  ────────────────────────  ────────────────────  ─────────
+  hello-ace                 Hello ACE             3 step(s)
+```
 
-# Inspect the sample playbook
+```sh
+# Inspect the sample playbook (human-readable)
 python -m app.cli show hello-ace
+
+# Inspect as raw JSON (machine-readable / pipe-friendly)
+python -m app.cli show hello-ace --json
 
 # Run it (uses the built-in mock LLM — no internet, no API key)
 python -m app.cli run hello-ace
+```
+```
+┌────────────────────────────────────────────────────┐
+│  Running: hello-ace  [task]                        │
+└────────────────────────────────────────────────────┘
+  ✓ Step 1/3: step-1
+    → [MockLLM] Acknowledged: ...
+  ✓ Step 2/3: step-2
+    → [MockLLM] Acknowledged: ...
+  ✓ Step 3/3: step-3
+    → [MockLLM] Acknowledged: ...
+  ────────────────────────────────────────────────────
+  Results: 3/3 successful
 ```
 
 Run under a specific ACE layer (e.g. Executive, Layer 4):
@@ -104,6 +130,12 @@ python -m app.cli run hello-ace --layer executive
 Available layers: `aspirational`, `global_strategy`, `agent_model`,
 `executive`, `cognitive_ctrl`, `task` (default).
 
+Add `--json` to get a machine-readable JSON result (useful for piping):
+
+```sh
+python -m app.cli run hello-ace --json | python -m json.tool
+```
+
 ---
 
 ## 6 · Run the test suite
@@ -112,7 +144,7 @@ Available layers: `aspirational`, `global_strategy`, `agent_model`,
 python -m pytest tests/ -v
 ```
 
-All 27 tests should pass in under 1 second.
+All 33 tests should pass in under 1 second.
 
 ---
 
@@ -170,7 +202,9 @@ need no network connection:
 | List files | `ls -la` |
 | Edit a file | `ed filename` or paste content with `cat > file << 'EOF'` |
 | Set environment variable | `export ACE_DATA_DIR=/path/to/data` |
-| View JSON output nicely | `python -m app.cli run hello-ace \| python -m json.tool` |
+| Suppress colours (e.g. for piping) | `NO_COLOR=1 python -m app.cli list` |
+| Get raw JSON output | `python -m app.cli run hello-ace --json` |
+| Pretty-print JSON output | `python -m app.cli run hello-ace --json \| python -m json.tool` |
 | Share output | Tap-and-hold → Copy in a-Shell |
 
 ---
