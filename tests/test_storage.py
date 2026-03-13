@@ -45,3 +45,50 @@ def test_persistence(tmp_path):
     # New instance reads same file
     s2 = JSONStore("col", tmp_path)
     assert s2.get("persisted") == {"id": "persisted", "data": "hello"}
+
+
+def test_save_many_inserts_all(store):
+    records = [{"id": f"r{i}", "value": i} for i in range(5)]
+    store.save_many(records)
+    assert len(store.list()) == 5
+    for r in records:
+        assert store.get(r["id"]) == r
+
+
+def test_save_many_single_disk_write(tmp_path, monkeypatch):
+    """save_many should write the file exactly once regardless of record count."""
+    store = JSONStore("col", tmp_path)
+    write_count = 0
+
+    original_save = store._save
+
+    def counting_save():
+        nonlocal write_count
+        write_count += 1
+        original_save()
+
+    monkeypatch.setattr(store, "_save", counting_save)
+    store.save_many([{"id": "a"}, {"id": "b"}, {"id": "c"}])
+    assert write_count == 1
+
+
+def test_save_many_empty_list_no_write(tmp_path, monkeypatch):
+    """save_many with an empty list must not trigger a disk write."""
+    store = JSONStore("col", tmp_path)
+    write_count = 0
+
+    original_save = store._save
+
+    def counting_save():
+        nonlocal write_count
+        write_count += 1
+        original_save()
+
+    monkeypatch.setattr(store, "_save", counting_save)
+    store.save_many([])
+    assert write_count == 0
+
+
+def test_save_many_requires_id(store):
+    with pytest.raises(ValueError, match="id"):
+        store.save_many([{"id": "ok"}, {"no_id": True}])

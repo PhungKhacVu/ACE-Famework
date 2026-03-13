@@ -15,6 +15,9 @@ class JSONStore:
 
     def __init__(self, collection: str, store_dir: Path) -> None:
         self._path = store_dir / f"{collection}.json"
+        # Ensure the directory exists once at construction time instead of on
+        # every _save() call, which avoids a redundant syscall per write.
+        store_dir.mkdir(parents=True, exist_ok=True)
         self._data: Dict[str, Any] = {}
         self._load()
 
@@ -28,7 +31,6 @@ class JSONStore:
                 self._data = json.load(fh)
 
     def _save(self) -> None:
-        self._path.parent.mkdir(parents=True, exist_ok=True)
         with self._path.open("w", encoding="utf-8") as fh:
             json.dump(self._data, fh, ensure_ascii=False, indent=2)
 
@@ -58,3 +60,19 @@ class JSONStore:
             self._save()
             return True
         return False
+
+    def save_many(self, records: List[Dict[str, Any]]) -> None:
+        """Insert or update multiple records with a single disk write.
+
+        This is far more efficient than calling :meth:`save` in a loop when
+        inserting many records at once (e.g. during seed loading), because it
+        batches all in-memory updates and flushes the JSON file only once.
+
+        Every record in *records* **must** contain an ``id`` key.
+        """
+        for record in records:
+            if "id" not in record:
+                raise ValueError("Every record must have an 'id' field.")
+            self._data[record["id"]] = record
+        if records:
+            self._save()
